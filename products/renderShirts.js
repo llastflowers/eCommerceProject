@@ -1,10 +1,11 @@
 function renderShirts(shirt) {
     const li = document.createElement('li');
-    li.className = shirt.category;
     li.title = shirt.title;
+    li.className = shirt.category;
 
-
+ 
     const h3 = document.createElement('h3');
+    h3.id = shirt.id;
     h3.textContent = shirt.title;
     li.appendChild(h3);
 

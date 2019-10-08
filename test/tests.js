@@ -1,1 +1,1 @@
-import './some-file.test/js';
+import './render-shirts.test.js';
