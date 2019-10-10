@@ -14,6 +14,9 @@ export function renderShoppingCart(shirt, cart) {
 } return tr
 
 
+
+
+
 // [
 //     {
 //         product: Shirt,
