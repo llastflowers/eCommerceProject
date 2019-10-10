@@ -1,4 +1,4 @@
-import renderCartRow from './render-table-row.js'
+import renderCartRow from './render-table-row.js';
 
 const test = QUnit.test;
 
@@ -20,6 +20,6 @@ test('Renders Shopping Cart Table Rows', assert => {
     const stringHtmlElement = cartRowElement.outerHTML;
 
 
-assert.equal(cartRowElement, expected);
+    assert.equal(stringHtmlElement, expected);
 
 });
