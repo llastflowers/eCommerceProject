@@ -3,7 +3,8 @@ export function renderShoppingCart(shirt, cart) {
     tr.textContent = cart.quantity;
     tr.textContent = shirt.id;
 
-    
+}
+
     // const button = document.createElement('button');
     // button.textContent = 'Add';
     // button.value = shirt.id;
@@ -11,7 +12,7 @@ export function renderShoppingCart(shirt, cart) {
     
     // li.appendChild(p);
 
-} return tr
+//} return tr
 
 
 
@@ -23,4 +24,4 @@ export function renderShoppingCart(shirt, cart) {
 //         quantity: 2,
 
 //     }
-// ]
+//

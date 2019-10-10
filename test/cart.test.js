@@ -4,14 +4,22 @@ const test = QUnit.test;
 
 QUnit.module('Render Shopping Card');
 
-test('Renders Shopping Cart Table Rows'), assert => {
+test('Renders Shopping Cart Table Rows', assert => {
 
-    const LineItem = {
+    const lineItem = {
         id: 'blue-shirt',
         quantity: 3
 
+
     };
 
-};
+    const expected = '<li id="blue-shirt" quantity= 3;></li>';
 
-const expected = '<li 'id="blue-shirt" quantity= 3;></li>;
+
+    const cartRowElement = renderCartRow(lineItem);
+    const stringHtmlElement = cartRowElement.outerHTML;
+
+
+assert.equal(cartRowElement, expected);
+
+});
