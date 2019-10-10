@@ -4,7 +4,7 @@ const test = QUnit.test;
 
 QUnit.module('Render Shirts');
 
-test('Renders Table Row', assert => {
+test('Renders Blue Shirt List Item', assert => {
     // arrange
     const blueShirt = {
         id: 'blue-shirt',
@@ -16,7 +16,7 @@ test('Renders Table Row', assert => {
         cost: 7.50,
     };
     
-    const expected = '<li title="Blue Shirt" class="shirts"><h3 id="blue-shirt">Blue Shirt</h3><img src="../assets/blue-shirt.jpg" alt="undefined image"><p class="price">$25.00<button value="undefined">Add</button></p></li>';
+    const expected = '<li title="Blue Shirt" class="shirts"><h3 id="blue-shirt">Blue Shirt</h3><img src="../assets/blue-shirt.jpg" alt="Blue Shirt"><p class="price">$25.00<button value="blue-shirt">Add</button></p></li>';
     
 
     // act
@@ -28,7 +28,7 @@ test('Renders Table Row', assert => {
 });
 
 
-test('Renders Table Row', assert => {
+test('Renders Red Shirt List Item', assert => {
     // arrange
     const redShirt = {
         id: 'red-shirt',
@@ -40,7 +40,7 @@ test('Renders Table Row', assert => {
         cost: 7.50,
     };
     
-    const expected = '<li title="Red Shirt" class="shirts"><h3 id="red-shirt">Red Shirt</h3><img src="../assets/red-shirt.jpg" alt="undefined image"><p class="price">$25.00<button value="undefined">Add</button></p></li>';
+    const expected = '<li title="Red Shirt" class="shirts"><h3 id="red-shirt">Red Shirt</h3><img src="../assets/red-shirt.jpg" alt="Red Shirt"><p class="price">$25.00<button value="red-shirt">Add</button></p></li>';
 
 
     // act
@@ -50,3 +50,5 @@ test('Renders Table Row', assert => {
     // assert
     assert.equal(stringHtmlElement, expected);
 });
+
+

@@ -12,7 +12,7 @@ function renderShirts(shirt) {
 
     const img = document.createElement('img');
     img.src = shirt.image;
-    img.alt = shirt.name + ' image';
+    img.alt = shirt.title;
     li.appendChild(img);
 
 
@@ -20,17 +20,14 @@ function renderShirts(shirt) {
     p.className = 'price';
 
 
-   // const usd = '$' + shirt.price.toFixed(2);
-    const usd = shirt.price.toLocaleString('en-US', { 
-        style: 'currency', 
-        currency: 'USD' 
-    });
+    const usd = '$' + shirt.price.toFixed(2);
     p.textContent = usd;
+    li.appendChild(p);
 
     
     const button = document.createElement('button');
     button.textContent = 'Add';
-    button.value = shirt.code;
+    button.value = shirt.id;
     p.appendChild(button);
 
     li.appendChild(p);

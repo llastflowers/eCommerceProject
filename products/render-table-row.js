@@ -1,26 +1,15 @@
-export default () => {
-    const tableRow = document.createElement('tr');
-
-    const columnOne = document.createElement('td');
-    columnOne.textContent = 'apple';
-
-    const columnTwo = document.createElement('td');
-    columnTwo.textContent = 'apple';
-
-    const columnThree = document.createElement('td');
-    columnThree.textContent = 'apple';
-
-    const columnFour = document.createElement('td');
-    columnFour.textContent = 'apple';
+function renderCartRow(shirt) {
+    const p = document.createElement('p');
+    p.className = 'price';
     
 
+    const li = document.createElement('li');
+    li.id = shirt.title;
+    li.quantity = 3;
+    li.appendChild(p);
+    
 
-    tableRow.appendChild(columnOne);
-    tableRow.appendChild(columnTwo);
-    tableRow.appendChild(columnThree);
-    tableRow.appendChild(columnFour);
+    return li;
+}
 
-
-
-    return tableRow;
-};
+export default renderCartRow;

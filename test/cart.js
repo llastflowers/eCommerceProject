@@ -1,1 +1,1 @@
-import '/test/cart.test.js';
+import './test/cart.test.js';
