@@ -1,15 +1,16 @@
 function renderCartRow(shirt) {
-    const p = document.createElement('p');
-    p.className = 'price';
+   // const p = document.createElement('p');
+//    p.className = 'quantity';
+    const makeTd = document.getElementById('td');
     
 
-    const li = document.createElement('li');
-    li.id = shirt.title;
-    li.quantity = 3;
-    li.appendChild(p);
+    const td = document.createElement('td');
+    td.id = shirt.id;
+    td.quantity = 3;
+    td.appendChild(td);
     
 
-    return li;
+    return td;
 }
 
-export default renderCartRow;
+export default renderCartRow; 
