@@ -7,7 +7,7 @@ const blueShirt = {
     category: 'shirts',
     price: 25.00,
     cost: 7.50,
-};
+}; 
 
 
 const redShirt = {

@@ -1,6 +1,4 @@
-import renderFruit from '../products/renderShirts.js';
-import renderTableRow from './shopping cart/index.html';
-import cartData
+import renderShirts from '../products/renderShirts.js';
 
 const test = QUnit.test;
 
@@ -8,33 +6,47 @@ QUnit.module('Render Shirts');
 
 test('Renders Table Row', assert => {
     // arrange
-    const apple = {
-        code: 'apple',
-        name: 'Red Apple',
-        image: 'apple.png',
-        description: 'A sweet, delicious, forbidden-to-some treat',
-        category: 'tree-fruit',
-        price: 1.00,
-        cost: 0.25
-    };
-    const expected = '<li title="A sweet, delicious, forbidden-to-some treat"><h3>Red Apple</h3><img src="../assets/apple.png" alt="Red Apple image"><p class="price">$1.00<button value="apple">Add</button></p></li>';
-    
-
-    const appleOrder = {
-        id: 'apple',
-        quantity: 4,
+    const blueShirt = {
+        id: 'blue-shirt',
+        title: 'Blue Shirt',
+        image: '../assets/blue-shirt.jpg',
+        description: 'A nice blue shirt.',
+        category: 'shirts',
+        price: 25.00,
+        cost: 7.50,
     };
     
-    const expected = <tr><td>apple</td><td>4</td><td>$1.00</td><td>$4.00</td></tr>
+    const expected = '<li title="Blue Shirt" class="shirts"><h3 id="blue-shirt">Blue Shirt</h3><img src="../assets/blue-shirt.jpg" alt="undefined image"><p class="price">$25.00<button value="undefined">Add</button></p></li>';
+    
 
-    const fruitElementTr = renderTableRow(apple, appleOrder);
-    const stringHtmleOfFruitElement = fruitElementTr.outerHTML;
+    // act
+    const shirtListElement = renderShirts(blueShirt);
+    const stringHtmlElement = shirtListElement.outerHTML;
+    
+    // assert
+    assert.equal(stringHtmlElement, expected);
+});
+
+
+test('Renders Table Row', assert => {
+    // arrange
+    const redShirt = {
+        id: 'red-shirt',
+        title: 'Red Shirt',
+        image: '../assets/red-shirt.jpg',
+        description: 'A nice red shirt.',
+        category: 'shirts',
+        price: 25.00,
+        cost: 7.50,
+    };
+    
+    const expected = '<li title="Red Shirt" class="shirts"><h3 id="red-shirt">Red Shirt</h3><img src="../assets/red-shirt.jpg" alt="undefined image"><p class="price">$25.00<button value="undefined">Add</button></p></li>';
 
 
     // act
-    const dom = renderFruit(apple);
-    const html = dom.outerHTML;
+    const shirtListElement = renderShirts(redShirt);
+    const stringHtmlElement = shirtListElement.outerHTML;
     
     // assert
-    assert.equal(html, expected);
+    assert.equal(stringHtmlElement, expected);
 });

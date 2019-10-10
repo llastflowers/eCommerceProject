@@ -3,7 +3,7 @@ function renderShirts(shirt) {
     li.title = shirt.title;
     li.className = shirt.category;
 
- 
+  
     const h3 = document.createElement('h3');
     h3.id = shirt.id;
     h3.textContent = shirt.title;
@@ -20,12 +20,13 @@ function renderShirts(shirt) {
     p.className = 'price';
 
 
-    const usd = '$' + shirt.price.toFixed(2);
-    // const usd = fruit.price.toLocaleString('en-US', { 
-    //     style: 'currency', 
-    //     currency: 'USD' 
-    // });
+   // const usd = '$' + shirt.price.toFixed(2);
+    const usd = shirt.price.toLocaleString('en-US', { 
+        style: 'currency', 
+        currency: 'USD' 
+    });
     p.textContent = usd;
+
     
     const button = document.createElement('button');
     button.textContent = 'Add';
